@@ -1,0 +1,22 @@
+{
+  "name": "sinatra-react",
+  "version": "1.0.0",
+  "description": "sinatra-react app",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Keon Cummings",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.5",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.7.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
