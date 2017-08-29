@@ -3,16 +3,16 @@ var webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  context: path.join(__dirname, "/public"),
+  context: path.join(__dirname, "public", "src"),
   devtool: debug ? "inline-sourcemap" : false,
-  entry: './public/src/js/client.js',
+  entry: path.join(__dirname, "public", "src", "js", "client"),
      module: {
         rules: [{
             test: /\.scss$/,
             use: [{
                 loader: "style-loader" // creates style nodes from JS strings 
             }, {
-                loader: "css-loader" // translates CSS into CommonJS 
+                loader: "css-loader"  // translates CSS into CommonJS 
             }, {
                 loader: "sass-loader" // compiles Sass to CSS 
             }]
@@ -29,10 +29,12 @@ module.exports = {
       }
     ]
   },
+  
    output: {
     path: __dirname + "/public",
     filename: "client.min.js"
   },
+
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
